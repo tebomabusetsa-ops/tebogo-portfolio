@@ -68,9 +68,15 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-}
 
+    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
+
+    border: 8px solid #d99a6c;
+
+    box-shadow:
+        8px 8px 0 #f2c6a0,
+        -6px -5px 0 #e8b38d;
+}
 /* NAVIGATION */
 
 nav {
