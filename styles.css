@@ -10,80 +10,20 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right,  #fffaf5, #fff0e3, #ffe4c7);
+    background: linear-gradient(to right, #fffaf5, #fff0e3, #ffe4c7);
     color: #3d302a;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px 30px;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-text>p {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.hero-text h1 {
-    font-size: 60px;
-    line-height: 1.1;
-    margin-bottom: 15px;
-    color: #8B6B61;
-}
-
-.hero-text h2 {
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 35px;
-    color: brown;
-}
-p {
-    color: brown;
-}
-.contact-intro {
-    margin-bottom: 40px;
-}
-/* PHOTO */
-
-.hero-image {
-    width: 280px;
-    height: 280px;
-    margin-bottom: 40px;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%;
-
-    border: 8px solid #d99a6c;
-
-    box-shadow:
-        8px 8px 0 #f2c6a0,
-        -6px -5px 0 #e8b38d;
-}
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin-top: 10px;
+    padding: 20px;
 }
 
 nav a {
@@ -97,7 +37,117 @@ nav a:hover {
     color: #a65f3f;
 }
 
-/* MAIN */
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    margin-bottom: 35px;
+}
+
+.hero-text > p {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #a65f3f;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #8b6b61;
+}
+
+.hero-text h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #a65f3f;
+}
+
+/* =========================
+   PHOTO + THREE CLOSE RINGS
+========================= */
+
+.hero-image {
+    position: relative;
+    width: 340px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LIGHT ORANGE - OUTER */
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 380px;
+
+    border: 8px solid #f2c6a0;
+    border-radius: 50%;
+
+    transform: rotate(-5deg);
+
+    z-index: 1;
+}
+
+/* DARK ORANGE - MIDDLE */
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 310px;
+    height: 370px;
+
+    border: 8px solid #d99a6c;
+    border-radius: 50%;
+
+    transform: rotate(5deg);
+
+    z-index: 2;
+}
+
+/* BROWN - INNER */
+
+.hero-image img {
+    position: relative;
+    z-index: 3;
+
+    width: 300px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border: 8px solid #8b5e4b;
+
+    border-radius: 50%;
+}
+
+/* =========================
+   MAIN
+========================= */
 
 main {
     max-width: 1000px;
@@ -107,28 +157,30 @@ main {
 
 section {
     margin-bottom: 100px;
-   
 }
 
 section h2 {
     font-size: 38px;
-    margin-bottom: 25px;
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 section p {
     font-size: 17px;
     line-height: 1.8;
+    color: #a65f3f;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .project {
     margin-top: 35px;
     padding: 30px;
-    background: white;
+    background: #fffaf5;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(61, 48, 42, 0.08);
 }
 
 .project h3 {
@@ -151,59 +203,10 @@ section p {
     background: #a65f3f;
 }
 
-/* CONTACT */
+/* =========================
+   SKILLS
+========================= */
 
-#contact a {
-    display: inline-block;
-    margin-top: 20px;
-    margin-right: 20px;
-    color: #3d302a;
-    font-weight: bold;
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #3d302a;
-    color: white;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .hero-text h1 {
-        font-size: 42px;
-    }
-
-    .hero-text h2 {
-        font-size: 21px;
-    }
-
-    .hero-image {
-        width: 220px;
-        height: 220px;
-    }
-
-    nav {
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        font-size: 15px;
-    }
-
-    main {
-        padding: 60px 20px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-}
 .skills-icons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -223,66 +226,23 @@ footer {
 .skill p {
     font-size: 18px;
     font-weight: bold;
+    color: #a65f3f;
 }
 
-@media (max-width: 768px) {
+/* =========================
+   CONTACT
+========================= */
 
-    .skills-icons {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-.skill i {
-    font-size: 55px;
-    margin-bottom: 15px;
-}
-
-/* Git */
-.skill:nth-child(1) i {
-    color: #F05032;
-}
-
-/* GitHub */
-.skill:nth-child(2) i {
-    color: #181717;
-}
-
-/* VS Code */
-.skill:nth-child(3) i {
-    color: #007ACC;
-}
-
-/* APIs */
-.skill:nth-child(4) i {
-    color: #6C63FF;
-}
-
-/* AI */
-.skill:nth-child(5) i {
-    color: #10A37F;
-}
-
-/* CSS */
-.skill:nth-child(6) i {
-    color: #1572B6;
-}
-
-/* HTML */
-.skill:nth-child(7) i {
-    color: #E34F26;
-}
-
-/* JavaScript */
-.skill:nth-child(8) i {
-    color: #F7DF1E;
-}
-
-/* Hosting */
-.skill:nth-child(9) i {
-    color: #8B5CF6;
-}
 .contact-intro {
     margin-bottom: 30px;
+}
+
+#contact a {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #3d302a;
+    font-weight: bold;
 }
 
 .form-intro {
@@ -305,7 +265,7 @@ form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #d6b8a5;
+    border: 2px solid #d99a6c;
     border-radius: 6px;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -327,4 +287,88 @@ form button {
 
 form button:hover {
     background: #a65f3f;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #3d302a;
+    color: white;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 40px 15px 70px;
+    }
+
+    .hero-text {
+        margin-bottom: 30px;
+    }
+
+    .hero-text > p {
+        font-size: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text h2 {
+        font-size: 21px;
+    }
+
+    /* CLOSE MOBILE RINGS */
+
+    .hero-image {
+        width: 270px;
+        height: 320px;
+    }
+
+    .hero-image::before {
+        width: 230px;
+        height: 280px;
+        border-width: 7px;
+    }
+
+    .hero-image::after {
+        width: 220px;
+        height: 270px;
+        border-width: 7px;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 260px;
+        border-width: 7px;
+    }
+
+    main {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
