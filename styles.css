@@ -53,7 +53,9 @@ body {
 p {
     color: brown;
 }
-
+.contact-intro {
+    margin-bottom: 40px;
+}
 /* PHOTO */
 
 .hero-image {
