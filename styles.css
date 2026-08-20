@@ -44,20 +44,17 @@ nav a:hover {
 .hero {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px 80px;
+    padding: 60px 20px 30px;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.hero-text {
-    margin-bottom: 35px;
 }
 
 .hero-text > p {
@@ -76,28 +73,29 @@ nav a:hover {
 .hero-text h2 {
     font-size: 25px;
     font-weight: normal;
+    margin-bottom: 35px;
     color: #a65f3f;
 }
 
 /* =========================
-   PHOTO + THREE CLOSE RINGS
+   PHOTO
+   THREE CLOSE RINGS
 ========================= */
 
 .hero-image {
     position: relative;
-    width: 340px;
-    height: 400px;
+    width: 360px;
+    height: 420px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* LIGHT ORANGE - OUTER */
+/* OUTER LIGHT ORANGE RING */
 
 .hero-image::before {
     content: "";
-
     position: absolute;
 
     width: 320px;
@@ -106,16 +104,15 @@ nav a:hover {
     border: 8px solid #f2c6a0;
     border-radius: 50%;
 
-    transform: rotate(-5deg);
+    transform: rotate(-4deg);
 
     z-index: 1;
 }
 
-/* DARK ORANGE - MIDDLE */
+/* MIDDLE DARK ORANGE RING */
 
 .hero-image::after {
     content: "";
-
     position: absolute;
 
     width: 310px;
@@ -124,12 +121,12 @@ nav a:hover {
     border: 8px solid #d99a6c;
     border-radius: 50%;
 
-    transform: rotate(5deg);
+    transform: rotate(4deg);
 
     z-index: 2;
 }
 
-/* BROWN - INNER */
+/* PHOTO + INNER BROWN RING */
 
 .hero-image img {
     position: relative;
@@ -161,8 +158,8 @@ section {
 
 section h2 {
     font-size: 38px;
-    margin-top: 25px;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 section p {
@@ -178,9 +175,9 @@ section p {
 .project {
     margin-top: 35px;
     padding: 30px;
-    background: #fffaf5;
+    background: white;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(61, 48, 42, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .project h3 {
@@ -193,8 +190,10 @@ section p {
     margin-top: 20px;
     margin-right: 10px;
     padding: 10px 18px;
+
     background: #3d302a;
     color: white;
+
     text-decoration: none;
     border-radius: 6px;
 }
@@ -226,7 +225,60 @@ section p {
 .skill p {
     font-size: 18px;
     font-weight: bold;
-    color: #a65f3f;
+}
+
+/* Git */
+
+.skill:nth-child(1) i {
+    color: #F05032;
+}
+
+/* GitHub */
+
+.skill:nth-child(2) i {
+    color: #181717;
+}
+
+/* VS Code */
+
+.skill:nth-child(3) i {
+    color: #007ACC;
+}
+
+/* APIs */
+
+.skill:nth-child(4) i {
+    color: #6C63FF;
+}
+
+/* AI */
+
+.skill:nth-child(5) i {
+    color: #10A37F;
+}
+
+/* CSS */
+
+.skill:nth-child(6) i {
+    color: #1572B6;
+}
+
+/* HTML */
+
+.skill:nth-child(7) i {
+    color: #E34F26;
+}
+
+/* JavaScript */
+
+.skill:nth-child(8) i {
+    color: #F7DF1E;
+}
+
+/* Hosting */
+
+.skill:nth-child(9) i {
+    color: #8B5CF6;
 }
 
 /* =========================
@@ -265,8 +317,10 @@ form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #d99a6c;
+
+    border: 1px solid #d6b8a5;
     border-radius: 6px;
+
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
@@ -277,10 +331,13 @@ form textarea {
 
 form button {
     padding: 12px 25px;
+
     background: #3d302a;
     color: white;
+
     border: none;
     border-radius: 6px;
+
     font-size: 16px;
     cursor: pointer;
 }
@@ -319,10 +376,6 @@ footer {
         padding: 40px 15px 70px;
     }
 
-    .hero-text {
-        margin-bottom: 30px;
-    }
-
     .hero-text > p {
         font-size: 20px;
     }
@@ -335,7 +388,7 @@ footer {
         font-size: 21px;
     }
 
-    /* CLOSE MOBILE RINGS */
+    /* MOBILE PHOTO */
 
     .hero-image {
         width: 270px;
@@ -360,6 +413,8 @@ footer {
         border-width: 7px;
     }
 
+    /* MAIN */
+
     main {
         padding: 60px 20px;
     }
@@ -367,6 +422,8 @@ footer {
     section h2 {
         font-size: 32px;
     }
+
+    /* SKILLS */
 
     .skills-icons {
         grid-template-columns: repeat(2, 1fr);
