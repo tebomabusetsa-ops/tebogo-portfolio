@@ -275,7 +275,50 @@ footer {
 .skill:nth-child(9) i {
     color: #8B5CF6;
 }
-.page i {
-    font-size: 22px;
-    margin-right: 8px;
+.contact-intro {
+    margin-bottom: 30px;
+}
+
+.form-intro {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+form {
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d6b8a5;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    padding: 12px 25px;
+    background: #3d302a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #a65f3f;
 }
