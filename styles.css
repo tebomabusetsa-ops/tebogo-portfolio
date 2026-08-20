@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #fff8f2, #ffe8d6, #ffd6a5);
+    background: linear-gradient(to right,  #fffaf5, #fff0e3, #ffe4c7);
     color: #3d302a;
 }
 
@@ -272,4 +272,8 @@ footer {
 /* Hosting */
 .skill:nth-child(9) i {
     color: #8B5CF6;
+}
+.page i {
+    font-size: 22px;
+    margin-right: 8px;
 }
